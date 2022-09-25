@@ -48,12 +48,16 @@ export default function ElementSelector() {
       <div className="elm_selector_placeholders">
         <div className="placeholders_container">
           {placeholders.map((placeholder) => (
-            <span key={placeholder}>{placeholder}</span>
+            <span draggable key={placeholder}>
+              {placeholder}
+            </span>
           ))}
         </div>
         <div className="date_placeholders_container">
           {datePlaceholders.map((placeholder) => (
-            <span key={placeholder}>{placeholder}</span>
+            <span draggable key={placeholder}>
+              {placeholder}
+            </span>
           ))}
         </div>
       </div>
