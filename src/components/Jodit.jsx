@@ -1,9 +1,14 @@
-import React, { useState, useRef, useMemo } from 'react';
-import JoditEditor from 'jodit-react';
+import React, { useState, useRef, useMemo, useEffect } from 'react';
+import JoditEditor, { Jodit } from 'jodit-react';
+import htmlDocx from 'html-docx-js/dist/html-docx';
+import { saveAs } from 'file-saver';
 
-export default function Jodit({ placeholder }) {
+// Sample Data
+import { sampleDoc } from '../data/sampleDoc';
+
+export default function Jodits() {
   const editor = useRef(null);
-  const [content, setContent] = useState('');
+  const [content, setContent] = useState(sampleDoc);
 
   const config = {
     height: '95vh',
@@ -41,119 +46,18 @@ export default function Jodit({ placeholder }) {
         }
       },
     },
-    buttons: [
-      'bold',
-      'strikethrough',
-      'underline',
-      'italic',
-      '|',
-      'ul',
-      'ol',
-      '|',
-      'outdent',
-      'indent',
-      '|',
-      'font',
-      'fontsize',
-      'brush',
-      '|',
-      'image',
-      'table',
-      '|',
-      'align',
-      'undo',
-      'redo',
-      '|',
-      'hr',
-      '|',
-      'print',
-    ],
-    buttonsMD: [
-      'bold',
-      'strikethrough',
-      'underline',
-      'italic',
-      '|',
-      'ul',
-      'ol',
-      '|',
-      'outdent',
-      'indent',
-      '|',
-      'font',
-      'fontsize',
-      'brush',
-      '|',
-      'image',
-      'table',
-      '|',
-      'align',
-      'undo',
-      'redo',
-      '|',
-      'hr',
-      '|',
-      'print',
-    ],
-    buttonsSM: [
-      'bold',
-      'strikethrough',
-      'underline',
-      'italic',
-      '|',
-      'ul',
-      'ol',
-      '|',
-      'outdent',
-      'indent',
-      '|',
-      'font',
-      'fontsize',
-      'brush',
-      '|',
-      'image',
-      'table',
-      '|',
-      'align',
-      'undo',
-      'redo',
-      '|',
-      'hr',
-      '|',
-      'print',
-    ],
-    buttonsXS: [
-      'bold',
-      'strikethrough',
-      'underline',
-      'italic',
-      '|',
-      'ul',
-      'ol',
-      '|',
-      'outdent',
-      'indent',
-      '|',
-      'font',
-      'fontsize',
-      'brush',
-      '|',
-      'image',
-      'table',
-      '|',
-      'align',
-      'undo',
-      'redo',
-      '|',
-      'hr',
-      '|',
-      'print',
-    ],
+  };
+
+  const handleDocx = async () => {
+    let converted = htmlDocx.asBlob(content);
+    saveAs(converted, 'document.docx');
   };
 
   return (
     <div className="jodit_container">
+      <button onClick={handleDocx}>Export</button>
       <JoditEditor
+        id="editor"
         ref={editor}
         value={content}
         config={config}
