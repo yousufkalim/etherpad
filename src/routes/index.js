@@ -1,9 +1,9 @@
 // Init
-import React from "react";
-import { Route, Switch } from "react-router-dom";
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 
 // Routes
-import Home from "../containers/Home.js";
+import Home from '../containers/Home.jsx';
 
 const index = () => {
   return (

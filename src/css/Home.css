@@ -1,0 +1,60 @@
+/* Home */
+.home_container {
+    display: flex;
+    padding-top: 20px;
+}
+
+/* Element selector */
+.elm_selector {
+    flex-basis: 20%;
+    padding: 0 15px;
+}
+
+.elm_selector_title {
+    font-family: 'Roboto', sans-serif;
+    margin: 10px 0;
+}
+
+.elm_selector_desc {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin: 10px 0;
+    color: gray;
+}
+
+.placeholders_container span {
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 10px;
+    margin: 5px 5px;
+    border: 1px solid rgb(255, 122, 122);
+    border-radius: 40px;
+    display: inline-block;
+    background-color: rgb(255, 224, 224);
+    color: rgb(177, 0, 0);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.date_placeholders_container span {
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 10px;
+    margin: 5px 5px;
+    border: 1px solid rgb(122, 122, 255);
+    border-radius: 40px;
+    display: inline-block;
+    background-color: rgb(224, 224, 255);
+    color: rgb(0, 0, 177);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Jodit Component Style */
+.jodit_container {
+    flex-basis: 60%;
+    height: 100vh;
+    margin: auto;
+}
+
+.elm_editor {
+    flex-basis: 20%;
+}
