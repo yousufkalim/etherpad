@@ -1,7 +1,8 @@
-import React, { useState, useRef, useMemo, useEffect } from 'react';
-import JoditEditor, { Jodit } from 'jodit-react';
+import React, { useState, useRef } from 'react';
+import JoditEditor from 'jodit-react';
 import htmlDocx from 'html-docx-js/dist/html-docx';
 import { saveAs } from 'file-saver';
+import docxIcon from '../assets/docx.png';
 
 // Sample Data
 import { sampleDoc } from '../data/sampleDoc';
@@ -46,16 +47,22 @@ export default function Jodits() {
         }
       },
     },
-  };
-
-  const handleDocx = async () => {
-    let converted = htmlDocx.asBlob(content);
-    saveAs(converted, 'document.docx');
+    controls: {
+      docx: {
+        name: 'docx',
+        tooltip: 'Export to word',
+        iconURL: docxIcon,
+        exec: function () {
+          let converted = htmlDocx.asBlob(content);
+          saveAs(converted, 'document.docx');
+        },
+      },
+    },
+    extraButtons: ['docx'],
   };
 
   return (
     <div className="jodit_container">
-      <button onClick={handleDocx}>Export</button>
       <JoditEditor
         id="editor"
         ref={editor}
