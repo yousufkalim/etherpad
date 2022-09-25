@@ -6,7 +6,7 @@ export default function Jodit({ placeholder }) {
   const [content, setContent] = useState('');
 
   const config = {
-    height: '100vh',
+    height: '95vh',
     readonly: false,
     enableDragAndDropFileToEditor: true,
     language: 'en',

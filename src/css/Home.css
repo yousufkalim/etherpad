@@ -55,6 +55,45 @@
     margin: auto;
 }
 
+/* Element editor */
 .elm_editor {
     flex-basis: 20%;
+}
+
+.elm_editor_container {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 0 15px;
+    height: 95vh;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.elm_editor_header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(234, 234, 234);
+}
+
+.elm_editor_header p {
+    font-size: 12px;
+    color: gray;
+}
+
+.elm_editor_header h4 {
+    color: rgba(0, 0, 0, 0.767);
+}
+
+.elm_editor_header svg {
+    cursor: pointer;
+}
+
+.elm_editor_body {
+    background-color: rgb(246, 246, 246);
+    width: 100%;
+    height: 100%;
+    padding: 20px 10px;
 }
