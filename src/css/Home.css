@@ -32,7 +32,7 @@
     background-color: rgb(255, 224, 224);
     color: rgb(177, 0, 0);
     font-size: 12px;
-    cursor: pointer;
+    cursor: grab;
 }
 
 .date_placeholders_container span {
@@ -45,7 +45,7 @@
     background-color: rgb(224, 224, 255);
     color: rgb(0, 0, 177);
     font-size: 12px;
-    cursor: pointer;
+    cursor: grab;
 }
 
 /* Jodit Component Style */
