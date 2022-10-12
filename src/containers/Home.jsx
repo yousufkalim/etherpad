@@ -1,10 +1,10 @@
 // Init
-import React from 'react';
+import React from "react";
 
 // Importing Components
-import ElementSelector from '../components/ElementSelector.jsx';
-import Jodit from '../components/Jodit.jsx';
-import ElementEditor from '../components/ElementEditor.jsx';
+import ElementSelector from "../components/ElementSelector.jsx";
+import Jodit from "../components/Jodit.jsx";
+import ElementEditor from "../components/ElementEditor.jsx";
 
 // Home Component
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
     <div className="home_container">
       <ElementSelector />
       <Jodit />
-      <ElementEditor />
+      {/*<ElementEditor />*/}
     </div>
   );
 }
