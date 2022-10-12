@@ -22,7 +22,7 @@
     color: gray;
 }
 
-.placeholders_container span {
+.placeholders {
     font-family: 'Roboto', sans-serif;
     padding: 5px 10px;
     margin: 5px 5px;
@@ -32,10 +32,10 @@
     background-color: rgb(255, 224, 224);
     color: rgb(177, 0, 0);
     font-size: 12px;
-    cursor: grab;
+    cursor: pointer;
 }
 
-.date_placeholders_container span {
+.date_placeholders {
     font-family: 'Roboto', sans-serif;
     padding: 5px 10px;
     margin: 5px 5px;
@@ -45,7 +45,7 @@
     background-color: rgb(224, 224, 255);
     color: rgb(0, 0, 177);
     font-size: 12px;
-    cursor: grab;
+    cursor: pointer;
 }
 
 /* Jodit Component Style */
